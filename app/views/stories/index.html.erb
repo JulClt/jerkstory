@@ -1,0 +1,54 @@
+<div class="container" id="homepage">
+
+  <header>
+    
+    <h1>Jerk Story</h1>
+    <h2>One Day, One Jerk</h2>
+
+  </header>
+
+  <div class="wrap">
+    
+    <div id="stories">
+
+      <% @stories.each do |story| %>
+    
+      <div class="story">
+        <h3><%= story.title %></h3>
+        <div class="content">
+          <%= story.content.html_safe %>
+        </div>
+      </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+
+  <!-- <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @stories.each do |story| %>
+        <tr>
+          <td><%= story.title %></td>
+          <td><%= story.content %></td>
+          <td><%= link_to 'Show', story %></td>
+          <td><%= link_to 'Edit', edit_story_path(story) %></td>
+          <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br> -->
+
+
+</div>

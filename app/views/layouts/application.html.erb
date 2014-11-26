@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>One Day, One Jerk - Jerk Story</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="menu-block">
+		<div class="container">
+			<ul>
+				<li>
+					<%= link_to "Home", root_path %>
+				</li>
+				<li>
+					<%= link_to "I know a jerk!", know_jerk_path %>
+				</li>
+				<li>
+					<%= link_to "About", about_path %>
+				</li>
+				<% if current_admin %>
+					<li>
+						<%= link_to "Post my jerk story", new_story_path %>
+					</li>
+					<li>
+						<%= link_to "Log out", destroy_admin_session_path, :method => :delete %>
+					</li>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container">
+		<nav id="toggle-nav">
+	    <a href="#"><i class="fa fa-bars"></i></a>
+	  </nav>
+	</div>
+
+	<%= yield %>
+
+	<footer>
+		JerkStory.com © 2014
+	</footer>
+
+</body>
+</html>

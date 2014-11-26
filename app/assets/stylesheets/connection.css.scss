@@ -1,0 +1,13 @@
+.shared-links {
+	a {margin: 5px 0; display: inline-block;}
+}
+#signin, #signup {
+	width: 30%;
+	min-width: 350px;
+	margin: 0 auto;
+	padding-bottom: 40px;
+	border-bottom: 10px solid rgb(240, 240, 240);
+
+	h2 {margin-bottom: 40px;}
+	.actions {margin-bottom: 35px;}
+}
